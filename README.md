@@ -1,6 +1,6 @@
 # Hotel Casino Noir - Las Vegas Strip
 
-Sitio web oficial y sistema de reservas con tecnología sin contacto y webhook de respuesta automática para WhatsApp.
+Sitio web oficial y sistema de reservas con tecnología sin contacto y despacho directo a la Conserjería Oficial por WhatsApp.
 
 ## ♠ Características
 
@@ -8,16 +8,19 @@ Sitio web oficial y sistema de reservas con tecnología sin contacto y webhook d
 - **Piso 1: Noir Wellness Gótico:** Espacio exclusivo de bienestar femenino con spa de piedra volcánica.
 - **Catálogo de Habitaciones Smart:** 120 habitaciones en 6 tipologías con domótica y check-in digital.
 - **Torre de 8 Niveles:** Arquitectura responsiva con casino 24/7 en planta baja, suites y penthouses.
-- **Webhook de Respuesta Automática:** Endpoint Serverless (`/api/webhook`) que responde automáticamente a los mensajes de WhatsApp en tiempo real sin requerir plantillas ni costos adicionales.
+- **Reserva Directa por WhatsApp (100% Gratis):** Al confirmar en la web, se abre WhatsApp con la solicitud completa y código `NOIR-XXXXXX` dirigido al Concierge (`+58 424-2083041`), quien responde automáticamente mediante el mensaje de bienvenida de WhatsApp Business.
 
-## ⚡ Configuración de la Respuesta Automática en Twilio Sandbox
+## 📲 Configuración del Mensaje de Bienvenida Automático (WhatsApp Business)
 
-1. En la consola de Twilio ve a: **Messaging > Settings > WhatsApp Sandbox Settings**.
-2. En el campo **"WHEN A MESSAGE COMES IN"**, coloca:
+En el teléfono del hotel con la app **WhatsApp Business**:
+1. Ir a **Ajustes > Herramientas para la empresa > Mensaje de bienvenida**.
+2. Activar la opción **Enviar mensaje de bienvenida**.
+3. Pegar el texto oficial:
    ```text
-   https://hotelcasinonoir.vercel.app/api/webhook
-   ```
-3. Configura el método como **HTTP POST**.
-4. Presiona **Save**.
+   ¡Hola! ♠ Gracias por comunicarte con la Conserjería Oficial de Hotel Casino Noir Las Vegas.
 
-Cada vez que un huésped envíe su solicitud desde la web a WhatsApp, tu servidor en Vercel le responderá automáticamente e instantáneamente confirmando su reserva y código.
+   Hemos recibido tu solicitud de reserva. Nuestro equipo está procesando la confirmación de tu habitación y la activación de tu llave digital inteligente.
+
+   En breve un anfitrión confirmará tu estadía. Si necesitas traslados desde el aeropuerto o atención prioritaria, responde directamente a este mensaje.
+   ```
+4. Guardar. En cuanto un cliente envíe su reserva desde la web, recibirá esta respuesta automática al instante.

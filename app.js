@@ -4,8 +4,8 @@
  * y despacho de notificaciones automáticas de WhatsApp.
  */
 
-// Número de WhatsApp oficial de Twilio Sandbox donde está conectado el Webhook automático
-const SENDER_WHATSAPP_INTERNATIONAL = "17372508034";
+// Número de WhatsApp oficial del Concierge de Hotel Casino Noir
+const SENDER_WHATSAPP_INTERNATIONAL = "584242083041";
 
 // Elementos del DOM principales
 const bookingForm = document.getElementById("bookingForm");
