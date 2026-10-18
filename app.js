@@ -184,89 +184,73 @@ async function handleBookingSubmission(event) {
   }
 
   const cleanLocalPhone = rawPhone.replace(/\D/g, "");
-  const fullFormattedPhone = `${countryCode}${cleanLocalPhone}`;
+  const fullFormattedPhone = `${countryCode} ${cleanLocalPhone}`;
 
-  // Indicador de carga en el botón
-  const originalButtonText = submitBookingBtn.textContent;
-  submitBookingBtn.disabled = true;
-  submitBookingBtn.textContent = "Procesando y Despachando WhatsApp...";
+  // Generación de código único formal de reserva (Ej: NOIR-429214)
+  const bookingId = `NOIR-${Math.floor(100000 + Math.random() * 900000)}`;
 
-  let reservationResult = null;
+  // Mensaje oficial estructurado que se envía directamente al WhatsApp del Concierge
+  const conciergeMessage = `¡Hola Concierge de Hotel Casino Noir! ♠\nHe registrado mi solicitud de reserva a través de la web:\n\n• Código: ${bookingId}\n• Huésped Titular: ${fullName}\n• Habitación: ${roomType.split(" (")[0]}\n• Período: ${checkInInput.value} al ${checkOutInput.value}\n• Huéspedes: ${guests} persona(s)\n• WhatsApp: ${fullFormattedPhone}\n• Correo: ${clientEmail}\n\nQuedo a la espera de su confirmación oficial. ¡Gracias!`;
 
+  const conciergeUrl = `https://wa.me/${SENDER_WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(conciergeMessage)}`;
+
+  // Intento de notificación asíncrona al backend si existe
   try {
-    // Petición a la función Serverless de Vercel (POST /api/reservar)
-    const response = await fetch("/api/reservar", {
+    fetch("/api/reservar", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         fullName,
         clientEmail,
-        fullPhone: fullFormattedPhone,
+        fullPhone: `${countryCode}${cleanLocalPhone}`,
         roomType,
         checkIn: checkInInput.value,
         checkOut: checkOutInput.value,
-        guests
+        guests,
+        bookingId
       })
-    });
+    }).catch(() => {});
+  } catch (err) {}
 
-    if (response.ok) {
-      reservationResult = await response.json();
-    }
-  } catch (networkError) {
-    console.info("[Modo Offline / Vista Previa] Simulación activa:", networkError.message);
-  } finally {
-    submitBookingBtn.disabled = false;
-    submitBookingBtn.textContent = originalButtonText;
+  // Apertura automática de WhatsApp directamente al Concierge del Hotel
+  try {
+    window.open(conciergeUrl, "_blank");
+  } catch (openErr) {
+    console.info("Apertura emergente bloqueada por navegador, usando enlace del modal.");
   }
 
-  // Si la API responde con éxito o si se ejecuta en vista previa local
-  const finalBookingId = reservationResult && reservationResult.bookingId
-    ? reservationResult.bookingId
-    : `NOIR-${Math.floor(100000 + Math.random() * 900000)}`;
-
-  const finalMessage = reservationResult && reservationResult.message
-    ? reservationResult.message
-    : buildReservationMessage(finalBookingId);
-
   const reservationData = {
-    bookingId: finalBookingId,
+    bookingId,
     fullName,
     clientEmail,
-    fullPhone: `${countryCode} ${cleanLocalPhone}`,
+    fullPhone: fullFormattedPhone,
     roomType,
     checkIn: checkInInput.value,
     checkOut: checkOutInput.value,
     guests,
-    message: finalMessage,
-    timestamp: new Date().toISOString()
+    conciergeUrl
   };
 
   showBookingConfirmationModal(reservationData);
 }
 
 /**
- * Despliega el modal emergente con los detalles de la reserva sin datos internos
+ * Despliega el modal emergente con los detalles de la reserva y acceso a WhatsApp
  * @param {Object} data Datos consolidados de la reserva
  */
 function showBookingConfirmationModal(data) {
   modalSummaryDetails.innerHTML = `
     <div><strong>Código de Confirmación:</strong> ${data.bookingId}</div>
     <div><strong>Huésped Titular:</strong> ${data.fullName}</div>
-    <div><strong>WhatsApp Registrado:</strong> ${data.fullPhone}</div>
+    <div><strong>WhatsApp de Contacto:</strong> ${data.fullPhone}</div>
     <div><strong>Habitación Seleccionada:</strong> ${data.roomType}</div>
     <div><strong>Período de Estadía:</strong> ${data.checkIn} al ${data.checkOut}</div>
     <div><strong>Número de Huéspedes:</strong> ${data.guests} persona(s)</div>
-    <div><strong>Estado del Mensaje:</strong> Enviado automáticamente a su WhatsApp</div>
+    <div><strong>Estado:</strong> Conectando con WhatsApp del Concierge...</div>
   `;
 
-  // El mensaje automático lo despacha el servidor. El botón de contacto solo permite consultar al concierge.
-  const guestInquiryText = `Hola, he registrado la reserva ${data.bookingId} a nombre de ${data.fullName} y quisiera consultar con conserjería.`;
-  const conciergeUrl = `https://wa.me/${SENDER_WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(guestInquiryText)}`;
-  
   if (whatsappDirectLink) {
-    whatsappDirectLink.href = conciergeUrl;
+    whatsappDirectLink.href = data.conciergeUrl;
   }
 
   bookingModal.style.display = "flex";
