@@ -4,8 +4,8 @@
  * y despacho de notificaciones automáticas de WhatsApp.
  */
 
-// Número telefónico emisor oficial del hotel en formato internacional para enlaces de WhatsApp
-const SENDER_WHATSAPP_INTERNATIONAL = "584242083041";
+// Número de WhatsApp oficial de Twilio Sandbox donde está conectado el Webhook automático
+const SENDER_WHATSAPP_INTERNATIONAL = "17372508034";
 
 // Elementos del DOM principales
 const bookingForm = document.getElementById("bookingForm");
@@ -190,27 +190,9 @@ async function handleBookingSubmission(event) {
   const bookingId = `NOIR-${Math.floor(100000 + Math.random() * 900000)}`;
 
   // Mensaje oficial estructurado que se envía directamente al WhatsApp del Concierge
-  const conciergeMessage = `¡Hola Concierge de Hotel Casino Noir! ♠\nHe registrado mi solicitud de reserva a través de la web:\n\n• Código: ${bookingId}\n• Huésped Titular: ${fullName}\n• Habitación: ${roomType.split(" (")[0]}\n• Período: ${checkInInput.value} al ${checkOutInput.value}\n• Huéspedes: ${guests} persona(s)\n• WhatsApp: ${fullFormattedPhone}\n• Correo: ${clientEmail}\n\nQuedo a la espera de su confirmación oficial. ¡Gracias!`;
+  const conciergeMessage = `¡Hola Concierge de Hotel Casino Noir! ♠\nHe registrado mi solicitud de reserva a través de la web:\n\n• Código: ${bookingId}\n• Huésped Titular: ${fullName}\n• Habitación: ${roomType.split(" (")[0]}\n• Período: ${checkInInput.value} al ${checkOutInput.value}\n• Huéspedes: ${guests} persona(s)\n• Correo: ${clientEmail}\n\nQuedo a la espera de su confirmación oficial. ¡Gracias!`;
 
   const conciergeUrl = `https://wa.me/${SENDER_WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(conciergeMessage)}`;
-
-  // Intento de notificación asíncrona al backend si existe
-  try {
-    fetch("/api/reservar", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        fullName,
-        clientEmail,
-        fullPhone: `${countryCode}${cleanLocalPhone}`,
-        roomType,
-        checkIn: checkInInput.value,
-        checkOut: checkOutInput.value,
-        guests,
-        bookingId
-      })
-    }).catch(() => {});
-  } catch (err) {}
 
   // Apertura automática de WhatsApp directamente al Concierge del Hotel
   try {
