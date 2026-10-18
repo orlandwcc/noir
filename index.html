@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Casino Noir | Elegancia que juega de noche - Las Vegas</title>
+  <meta name="description" content="Hotel Casino Noir en el Strip de Las Vegas. Experiencia exclusiva de hospitalidad tecnológica, casino nocturno y el primer Piso Wellness Gótico para mujeres.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado Principal y Navegación Responsiva -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-link" aria-label="Inicio Hotel Casino Noir">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Hotel Casino Noir">
+          <circle cx="50" cy="50" r="48" fill="#C9A227" stroke="#0D0D12" stroke-width="2"/>
+          <path d="M50 2 A48 48 0 0 1 74 8.4 L67 20 A36 36 0 0 0 50 14 Z" fill="#7A0F1F"/>
+          <path d="M84.6 18.6 A48 48 0 0 1 98 42 L84 44 A36 36 0 0 0 74 27 Z" fill="#0D0D12"/>
+          <path d="M98 58 A48 48 0 0 1 84.6 81.4 L74 73 A36 36 0 0 0 84 56 Z" fill="#7A0F1F"/>
+          <path d="M74 91.6 A48 48 0 0 1 50 98 L50 86 A36 36 0 0 0 67 80 Z" fill="#0D0D12"/>
+          <path d="M26 91.6 A48 48 0 0 1 15.4 81.4 L26 73 A36 36 0 0 0 33 80 Z" fill="#7A0F1F"/>
+          <path d="M2 58 A48 48 0 0 1 2 42 L16 44 A36 36 0 0 0 16 56 Z" fill="#0D0D12"/>
+          <path d="M15.4 18.6 A48 48 0 0 1 26 8.4 L33 20 A36 36 0 0 0 26 27 Z" fill="#7A0F1F"/>
+          <circle cx="50" cy="50" r="36" fill="#0D0D12" stroke="#C9A227" stroke-width="1.8"/>
+          <circle cx="50" cy="50" r="33.5" fill="none" stroke="#C9A227" stroke-dasharray="1.5 2"/>
+          <path d="M38 66 L38 42 C38 31 50 24 50 24 C50 24 62 31 62 42 L62 66 Z" fill="#3E1B5C" stroke="#C9A227" stroke-width="1.5"/>
+          <path d="M50 33 C48 37 42 42 42 47.5 C42 51.5 45 54 48.5 53.5 C49.5 53.3 50 52.8 50 52.8 C50 52.8 50.5 53.3 51.5 53.5 C55 54 58 51.5 58 47.5 C58 42 52 37 50 33 Z" fill="#C9A227"/>
+          <path d="M48 53 L46 60 L54 60 L52 53 Z" fill="#C9A227"/>
+          <line x1="36" y1="67" x2="64" y2="67" stroke="#C9A227" stroke-width="1.8"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">HOTEL CASINO NOIR</span>
+          <span class="brand-slogan">Elegancia que juega de noche</span>
+        </div>
+      </a>
+
+      <nav class="main-navigation" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+          <li><a href="#habitaciones" class="nav-link">Habitaciones</a></li>
+          <li><a href="#wellness" class="nav-link">Piso Wellness</a></li>
+          <li><a href="#casino" class="nav-link">Casino & Servicios</a></li>
+          <li><a href="#edificio" class="nav-link">La Torre</a></li>
+          <li><a href="#reserva" class="nav-btn-highlight">Reservar</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada Principal (Hero Section) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-backdrop"></div>
+      <div class="hero-container">
+        <div class="hero-tag-badge">Las Vegas Strip Central &bull; Nevada</div>
+        <h1 class="hero-title">HOTEL CASINO NOIR</h1>
+        <p class="hero-lead">Donde la mística nocturna se encuentra con el confort inteligente. 120 habitaciones equipadas con domótica avanzada, un vibrante casino de paños negros y el primer santuario de bienestar gótico de Las Vegas.</p>
+        
+        <div class="hero-actions">
+          <a href="#reserva" class="btn-primary" id="heroReserveBtn">Reservar Estadía</a>
+          <a href="#habitaciones" class="btn-outline">Ver Habitaciones & Tarifas</a>
+        </div>
+
+        <!-- Cifras Distintivas de la Experiencia -->
+        <div class="hero-kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">Alojamiento Boutique</span>
+            <span class="kpi-value">120</span>
+            <span class="kpi-sub">Habitaciones inteligentes en 8 pisos</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Piso de Juego 24/7</span>
+            <span class="kpi-value">170</span>
+            <span class="kpi-sub">Slots de última generación y 16 mesas</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Santuario Exclusivo</span>
+            <span class="kpi-value">Piso 1</span>
+            <span class="kpi-sub">Noir Wellness Gótico para mujeres</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Tecnología Sin Contacto</span>
+            <span class="kpi-value">100%</span>
+            <span class="kpi-sub">Llave digital móvil & check-in QR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 1: La Experiencia y Ubicación en Las Vegas -->
+    <section class="section-container" id="experiencia">
+      <div class="section-header">
+        <span class="section-kicker">Destino Exclusivo</span>
+        <h2 class="section-title">Ubicación Neurálgica & Estilo Inconfundible</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">Emplazado en el centro vibrante de Las Vegas Boulevard South, Hotel Casino Noir ofrece una propuesta que equilibra la alta adrenalina del juego con el descanso tecnológico más refinado.</p>
+      </div>
+
+      <div class="grid-two-columns">
+        <!-- Ficha de Ubicación para Huéspedes -->
+        <div class="data-card">
+          <div class="card-badge">Conectividad & Accesos</div>
+          <h3 class="card-title">En el Centro de la Acción</h3>
+          <p class="card-description">A escasos minutos de los centros de espectáculos, gastronomía mundial y la vida nocturna que define al Strip.</p>
+          <ul class="data-list">
+            <li><strong>Dirección:</strong> 3680 Las Vegas Boulevard South, Paradise, NV 89109</li>
+            <li><strong>Llegada desde el Aeropuerto:</strong> A solo 10 a 20 minutos en auto desde el Aeropuerto Internacional Harry Reid (servicio de traslado privado disponible).</li>
+            <li><strong>Conectividad:</strong> Acceso inmediato a la red de monorriel de Las Vegas, plataformas de transporte y paradas directas.</li>
+            <li><strong>Atención Bilingüe:</strong> Equipo de conserjería altamente capacitado en inglés y español las 24 horas.</li>
+            <li><strong>Acceso al Casino:</strong> Sala de juegos y apuestas disponible exclusivamente para mayores de 21 años.</li>
+          </ul>
+        </div>
+
+        <!-- Pilares del Concepto Noir -->
+        <div class="data-card card-accent-burgundy">
+          <div class="card-badge">Nuestra Esencia</div>
+          <h3 class="card-title">Hospitalidad Inteligente</h3>
+          <div class="pillars-list">
+            <div class="pillar-item">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <h4>Autonomía Digital Total</h4>
+                <p>Su smartphone es su llave. Ingrese a su habitación, ajuste la iluminación y solicite servicios de conserjería sin filas.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <h4>Diseño Gótico Contemporáneo</h4>
+                <p>Una estética sobria inspirada en tonos carbón, burdeos y detalles en oro mate que crean una atmósfera acogedora y cinematográfica.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <h4>Compromiso Ecológico del Desierto</h4>
+                <p>Uso de energía solar, sistemas de ahorro hídrico certificados y productos de cortesía 100% artesanales y biodegradables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Inventario de Habitaciones & Tarifas -->
+    <section class="section-container section-darker" id="habitaciones">
+      <div class="section-header">
+        <span class="section-kicker">Colección de Habitaciones</span>
+        <h2 class="section-title">Habitaciones Inteligentes & Tarifas</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">Espacios diseñados para el descanso óptimo con aislamiento acústico superior, climatización inteligente y domótica de vanguardia.</p>
+      </div>
+
+      <!-- Tabla Responsiva de Habitaciones -->
+      <div class="responsive-table-container">
+        <table class="data-table" id="roomsTable">
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Inventario</th>
+              <th>Espacio</th>
+              <th>Camas y Capacidad</th>
+              <th>Tarifa por Noche</th>
+              <th>Acceso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="room-pill">Estándar Smart</span></td>
+              <td>55 u.</td>
+              <td>27 m² (291 ft²)</td>
+              <td>2 Queen o 1 King (Hasta 4 huéspedes)</td>
+              <td class="table-price">$129 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><span class="room-pill">Superior Smart Plus</span></td>
+              <td>30 u.</td>
+              <td>32 m² (344 ft²)</td>
+              <td>1 King o 2 Queen (Hasta 4 huéspedes)</td>
+              <td class="table-price">$159 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><span class="room-pill">Accesible (ADA)</span></td>
+              <td>7 u.</td>
+              <td>34 m² (366 ft²)</td>
+              <td>1 King o 2 Queen adaptadas (Hasta 4 huéspedes)</td>
+              <td class="table-price">$139 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><span class="room-pill highlight-pill">Suite Junior Premium</span></td>
+              <td>6 u.</td>
+              <td>52 m² (560 ft²)</td>
+              <td>1 King y Sala Lounge (Hasta 4 huéspedes)</td>
+              <td class="table-price">$259 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><span class="room-pill wellness-pill">Noir Wellness (Piso Gótico)</span></td>
+              <td>20 u.</td>
+              <td>34 m² (366 ft²)</td>
+              <td>1 King o 2 Queen (Hasta 4 huéspedes)</td>
+              <td class="table-price">$209 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+            <tr>
+              <td><span class="room-pill gold-pill">Penthouse con Terraza</span></td>
+              <td>2 u.</td>
+              <td>110 m² (1,184 ft²)</td>
+              <td>2 Recámaras Máster (Hasta 6 huéspedes)</td>
+              <td class="table-price">$650 USD</td>
+              <td><a href="#reserva" class="table-action-link">Reservar &rarr;</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tarjetas de Confort Tecnológico -->
+      <div class="tech-cards-grid">
+        <article class="feature-card">
+          <div class="feature-card-header">
+            <h4>Estándar Smart</h4>
+            <span class="card-tag">Pisos 2 a 5</span>
+          </div>
+          <p class="feature-tech"><strong>Equipamiento:</strong> Llave digital móvil, Smart TV 4K con transmisión de contenidos, puertos USB-C de alta velocidad y control lumínico inteligente.</p>
+          <p class="feature-eco"><strong>Sostenibilidad:</strong> Iluminación LED automatizada y línea de baño botánica biodegradable.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card-header">
+            <h4>Superior Smart Plus</h4>
+            <span class="card-tag">Pisos 2 a 5</span>
+          </div>
+          <p class="feature-tech"><strong>Equipamiento:</strong> Todo lo anterior más control ambiental por comandos de voz, cortinas automatizadas y termostato de precisión.</p>
+          <p class="feature-eco"><strong>Sostenibilidad:</strong> Sensores de presencia para optimización energética.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-card-header">
+            <h4>Accesible ADA</h4>
+            <span class="card-tag">Planta Baja</span>
+          </div>
+          <p class="feature-tech"><strong>Equipamiento:</strong> Señalización luminosa y táctil, timbres adaptados, TV con subtítulos asistidos, cerraduras ergonómicas y baño con barras de seguridad.</p>
+          <p class="feature-eco"><strong>Sostenibilidad:</strong> Griferías con sensores de caudal adaptadas.</p>
+        </article>
+
+        <article class="feature-card card-spotlight-wellness">
+          <div class="feature-card-header">
+            <h4>Noir Wellness</h4>
+            <span class="card-tag tag-wellness">Piso 1 Gótico</span>
+          </div>
+          <p class="feature-tech"><strong>Equipamiento:</strong> Aromaterapia ambiental y cromoterapia relajante personalizada, tocador con luz regulable para estilismo y acceso privado controlado.</p>
+          <p class="feature-eco"><strong>Sostenibilidad:</strong> Selección de jabones y sales de baño artesanales en envases recargables.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 3: Piso Wellness Gótico (Piso 1) -->
+    <section class="section-container" id="wellness">
+      <div class="section-header">
+        <span class="section-kicker">Santuario Exclusivo</span>
+        <h2 class="section-title">Piso 1: Noir Wellness Gótico</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">Un refugio creado especialmente para el descanso y el bienestar femenino en Las Vegas. Una atmósfera de suaves terciopelos morados, aromas de sándalo y atención de primer nivel.</p>
+      </div>
+
+      <div class="wellness-showcase">
+        <div class="wellness-zones-list">
+          <div class="wellness-zone-item">
+            <div class="zone-number">01</div>
+            <div class="zone-info">
+              <h4>Recepción Privada & Acceso Exclusivo</h4>
+              <p>Anfitriona de bienvenida personalizada y acceso restringido mediante llave digital para garantizar la máxima tranquilidad y privacidad durante su estancia.</p>
+            </div>
+          </div>
+
+          <div class="wellness-zone-item">
+            <div class="zone-number">02</div>
+            <div class="zone-info">
+              <h4>Spa Compacto Noir</h4>
+              <p>Jacuzzi de piedra volcánica negra, sauna seca, cabinas para masajes terapéuticos y tratamientos faciales con ingredientes naturales.</p>
+            </div>
+          </div>
+
+          <div class="wellness-zone-item">
+            <div class="zone-number">03</div>
+            <div class="zone-info">
+              <h4>Salón de Estilismo & Belleza</h4>
+              <p>Peluquería profesional, manicure y estaciones de maquillaje con iluminación regulable, ideal para prepararse antes de las veladas del Strip.</p>
+            </div>
+          </div>
+
+          <div class="wellness-zone-item">
+            <div class="zone-number">04</div>
+            <div class="zone-info">
+              <h4>Lounge & Rincón Fotográfico</h4>
+              <p>Espacio social con confortables butacas, selección de tés e infusiones, y una zona equipada con iluminación profesional para capturar momentos inolvidables.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="wellness-card-visual">
+          <div class="visual-accent-box">
+            <h3>«Santuario Noir Wellness»</h3>
+            <p>Pensado para viajeras independientes, grupos de amigas, despedidas de soltera elegantes y creadoras de contenido que buscan un refugio singular.</p>
+            <ul class="wellness-features-checklist">
+              <li>20 Habitaciones especializadas de 34 m²</li>
+              <li>Boutique de cosmética y jabones artesanales</li>
+              <li>Aromaterapia y ambientación relajante</li>
+              <li>Servicio de té y repostería exclusiva</li>
+            </ul>
+            <a href="#reserva" class="btn-primary full-width">Reservar Habitación Wellness</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Casino & Entretenimiento -->
+    <section class="section-container section-darker" id="casino">
+      <div class="section-header">
+        <span class="section-kicker">Emoción Nocturna</span>
+        <h2 class="section-title">El Casino & Espacios Gastronómicos</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">La energía clásica de Las Vegas reinterpretada con sofisticación formal, paños negros, iluminación cálida y una atmósfera cautivadora.</p>
+      </div>
+
+      <div class="grid-three-columns">
+        <div class="service-box">
+          <div class="service-icon">♠</div>
+          <h3>Piso de Casino Planta Baja</h3>
+          <p>170 máquinas tragamonedas multilínea y 16 mesas de juego en vivo con crupieres expertos: Blackjack, Ruleta, Craps, Baccarat y salas de Póker.</p>
+          <span class="service-stat">Abierto las 24 horas &bull; Mayores de 21 años</span>
+        </div>
+
+        <div class="service-box">
+          <div class="service-icon">🍸</div>
+          <h3>Restaurante & Bar-Cafetería</h3>
+          <p>Carta gastronómica internacional con desayunos nutritivos, almuerzos de autor y coctelería nocturna creada por mixólogos galardonados.</p>
+          <span class="service-stat">Servicio continuo & opciones saludables</span>
+        </div>
+
+        <div class="service-box">
+          <div class="service-icon">🏊</div>
+          <h3>Piscina en Terraza & Terraza</h3>
+          <p>Ubicada en el Piso 6, ofrece una piscina climatizada con vistas panorámicas a Las Vegas, gimnasio equipado y solárium para relajarse de día.</p>
+          <span class="service-stat">Nivel 6 recreativo &bull; Salón de eventos privados</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Arquitectura y Distribución de la Torre -->
+    <section class="section-container" id="edificio">
+      <div class="section-header">
+        <span class="section-kicker">Distribución del Complejo</span>
+        <h2 class="section-title">Los 8 Niveles de Hotel Casino Noir</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">Una torre diseñada para separar armoniosamente el dinamismo del entretenimiento de la serenidad de los pisos residenciales.</p>
+      </div>
+
+      <div class="tower-diagram">
+        <div class="floor-level floor-penthouse">
+          <div class="floor-badge">Nivel 7</div>
+          <div class="floor-details">
+            <h4>Penthouses de Lujo (2 unidades)</h4>
+            <p>110 m² de máxima distinción con ventanales de piso a techo, jacuzzi en terraza privada y asistencia de mayordomo digital 24 horas.</p>
+          </div>
+        </div>
+
+        <div class="floor-level floor-suites">
+          <div class="floor-badge">Nivel 6</div>
+          <div class="floor-details">
+            <h4>Suites Junior, Piscina Climatizada & Gimnasio</h4>
+            <p>6 suites de 52 m², terraza con piscina exterior, gimnasio equipado y salón para pequeñas reuniones o eventos privados.</p>
+          </div>
+        </div>
+
+        <div class="floor-level floor-standard">
+          <div class="floor-badge">Niveles 2 al 5</div>
+          <div class="floor-details">
+            <h4>Habitaciones Estándar & Superior Smart (85 unidades)</h4>
+            <p>Alojamiento moderno y confortable con control digital total, excelente acústica y vistas a la ciudad.</p>
+          </div>
+        </div>
+
+        <div class="floor-level floor-gothic">
+          <div class="floor-badge">Nivel 1</div>
+          <div class="floor-details">
+            <h4>Piso Noir Wellness Gótico (20 unidades)</h4>
+            <p>Espacio exclusivo con spa de piedra volcánica, peluquería, manicura, lounge de té y área para fotografía.</p>
+          </div>
+        </div>
+
+        <div class="floor-level floor-ground">
+          <div class="floor-badge">Planta Baja</div>
+          <div class="floor-details">
+            <h4>Casino Central, Lobby, Gastronomía & Habitaciones ADA</h4>
+            <p>Recepción 24 horas con registro sin contacto, salón de juegos, bar-cafetería y 7 habitaciones con accesibilidad universal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 6: Formulario de Reserva con Confirmación Digital -->
+    <section class="section-container" id="reserva">
+      <div class="section-header">
+        <span class="section-kicker">Planifique su Estadía</span>
+        <h2 class="section-title">Reserva de Habitaciones</h2>
+        <div class="gold-divider"></div>
+        <p class="section-intro">Complete el formulario a continuación para registrar su solicitud. Nuestro equipo de conserjería le enviará la confirmación inmediata a su número de WhatsApp.</p>
+      </div>
+
+      <div class="reservation-wrapper">
+        <!-- Formulario -->
+        <div class="reservation-form-box">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <label for="fullName">Nombre Completo <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="Ej. Valentina Morales" required>
+              <span class="form-error-msg" id="fullNameError"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group half-width">
+                <label for="clientEmail">Correo Electrónico <span class="required">*</span></label>
+                <input type="email" id="clientEmail" name="clientEmail" placeholder="nombre@correo.com" required>
+                <span class="form-error-msg" id="clientEmailError"></span>
+              </div>
+              <div class="form-group half-width">
+                <label for="clientPhone">Teléfono / WhatsApp <span class="required">*</span></label>
+                <div class="phone-input-group">
+                  <select id="countryCode" name="countryCode" class="country-code-select" aria-label="Código de país">
+                    <option value="+58" selected>🇻🇪 +58 (Venezuela)</option>
+                    <option value="+1">🇺🇸 +1 (EE.UU. / Canadá)</option>
+                    <option value="+34">🇪🇸 +34 (España)</option>
+                    <option value="+52">🇲🇽 +52 (México)</option>
+                    <option value="+57">🇨🇴 +57 (Colombia)</option>
+                    <option value="+54">🇦🇷 +54 (Argentina)</option>
+                    <option value="+56">🇨🇱 +56 (Chile)</option>
+                    <option value="+51">🇵🇪 +51 (Perú)</option>
+                    <option value="+507">🇵🇦 +507 (Panamá)</option>
+                    <option value="+593">🇪🇨 +593 (Ecuador)</option>
+                    <option value="+506">🇨🇷 +506 (Costa Rica)</option>
+                    <option value="+55">🇧🇷 +55 (Brasil)</option>
+                    <option value="+44">🇬🇧 +44 (Reino Unido)</option>
+                    <option value="+33">🇫🇷 +33 (Francia)</option>
+                    <option value="+49">🇩🇪 +49 (Alemania)</option>
+                    <option value="+39">🇮🇹 +39 (Italia)</option>
+                  </select>
+                  <input type="tel" id="clientPhone" name="clientPhone" class="phone-number-input" placeholder="424 123 4567" required>
+                </div>
+                <span class="form-help">Seleccione su país e ingrese su número celular de WhatsApp.</span>
+                <span class="form-error-msg" id="clientPhoneError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="roomType">Tipo de Habitación <span class="required">*</span></label>
+              <select id="roomType" name="roomType" required>
+                <option value="" disabled selected>Seleccione una opción disponible...</option>
+                <option value="Estándar Smart ($129 USD / noche)">Estándar Smart ($129 USD / noche - 27 m²)</option>
+                <option value="Superior Smart Plus ($159 USD / noche)">Superior Smart Plus ($159 USD / noche - 32 m²)</option>
+                <option value="Accesible (ADA) ($139 USD / noche)">Accesible (ADA) ($139 USD / noche - 34 m²)</option>
+                <option value="Suite Junior Premium ($259 USD / noche)">Suite Junior Premium ($259 USD / noche - 52 m²)</option>
+                <option value="Noir Wellness (piso gótico) ($209 USD / noche)">Noir Wellness (Piso Gótico) ($209 USD / noche - 34 m²)</option>
+                <option value="Penthouse ($650 USD / noche)">Penthouse con Terraza Strip ($650 USD / noche - 110 m²)</option>
+              </select>
+              <span class="form-error-msg" id="roomTypeError"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group half-width">
+                <label for="checkIn">Fecha de Check-in <span class="required">*</span></label>
+                <input type="date" id="checkIn" name="checkIn" required>
+                <span class="form-error-msg" id="checkInError"></span>
+              </div>
+              <div class="form-group half-width">
+                <label for="checkOut">Fecha de Check-out <span class="required">*</span></label>
+                <input type="date" id="checkOut" name="checkOut" required>
+                <span class="form-error-msg" id="checkOutError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guestsCount">Número de Huéspedes <span class="required">*</span></label>
+              <select id="guestsCount" name="guestsCount" required>
+                <option value="1">1 Huésped</option>
+                <option value="2" selected>2 Huéspedes</option>
+                <option value="3">3 Huéspedes</option>
+                <option value="4">4 Huéspedes</option>
+                <option value="5">5 Huéspedes (Penthouse)</option>
+                <option value="6">6 Huéspedes (Penthouse)</option>
+              </select>
+            </div>
+
+            <div class="form-concierge-notice">
+              <div class="notice-title">✦ Confirmación Inmediata de Concierge</div>
+              <p>Al confirmar su solicitud, nuestro sistema generará su comprobante digital y le enviará el mensaje oficial a su WhatsApp.</p>
+            </div>
+
+            <button type="submit" class="btn-primary full-width" id="submitBookingBtn">
+              Confirmar Solicitud de Reserva
+            </button>
+          </form>
+        </div>
+
+        <!-- Tarjeta de Demostración del Mensaje de WhatsApp Recibido -->
+        <div class="whatsapp-preview-card">
+          <div class="chat-header-mockup">
+            <div class="chat-avatar">♠</div>
+            <div class="chat-sender-info">
+              <div class="chat-sender-name">Hotel Casino Noir <span class="verified-check">✓</span></div>
+              <div class="chat-sender-id">Conserjería Oficial Noir</div>
+            </div>
+          </div>
+          <div class="chat-body-mockup">
+            <div class="chat-bubble-received" id="chatBubbleOutput">
+              <p class="bubble-text" id="bubbleDynamicText">
+                «¡Hola [Nombre]! Gracias por solicitar tu reserva en nuestro hotel para las fechas [Check-in] a [Check-out]. Tu código de reserva es [NOIR-XXXXXX]. Hemos recibido tus datos correctamente y nuestro equipo está procesando la confirmación de tu habitación [Tipo de Habitación].»
+              </p>
+              <span class="bubble-timestamp" id="bubbleTime">12:00 PM</span>
+            </div>
+          </div>
+          <div class="chat-footer-note">
+            <p>Notificación automática enviada a su WhatsApp. Su código de reserva le permitirá gestionar su check-in y activar su llave digital.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de Confirmación en Pantalla -->
+      <div class="booking-modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="booking-modal-card">
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Cerrar modal">&times;</button>
+          <div class="modal-status-icon">✓</div>
+          <h3 class="modal-title">¡Solicitud Registrada con Éxito!</h3>
+          <p class="modal-lead">Su reserva ha sido registrada en el sistema. Le hemos enviado el mensaje de confirmación con su código oficial directamente a su WhatsApp.</p>
+          
+          <div class="modal-summary-box" id="modalSummaryDetails">
+            <!-- Detalles estructurados inyectados por JavaScript -->
+          </div>
+
+          <div class="modal-action-buttons">
+            <a href="#" id="whatsappDirectLink" class="btn-whatsapp-direct" target="_blank" rel="noopener noreferrer">
+              <span>Ver Mensaje en WhatsApp</span>
+            </a>
+            <button class="btn-outline-modal" id="modalAcceptBtn">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de Página Institucional y Limpio -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column brand-col">
+        <div class="footer-brand">
+          <svg class="brand-logo-svg small" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#C9A227"/>
+            <circle cx="50" cy="50" r="36" fill="#0D0D12"/>
+            <path d="M38 66 L38 42 C38 31 50 24 50 24 C50 24 62 31 62 42 L62 66 Z" fill="#3E1B5C" stroke="#C9A227" stroke-width="1.5"/>
+            <path d="M50 33 C48 37 42 42 42 47.5 C42 51.5 45 54 48.5 53.5 C49.5 53.3 50 52.8 50 52.8 C50 52.8 50.5 53.3 51.5 53.5 C55 54 58 51.5 58 47.5 C58 42 52 37 50 33 Z" fill="#C9A227"/>
+            <path d="M48 53 L46 60 L54 60 L52 53 Z" fill="#C9A227"/>
+          </svg>
+          <div>
+            <div class="footer-logo-title">HOTEL CASINO NOIR</div>
+            <div class="footer-logo-sub">Elegancia que juega de noche</div>
+          </div>
+        </div>
+        <p class="footer-bio">Una experiencia exclusiva de hospitalidad inteligente, casino de primer nivel y bienestar sensorial en el corazón de Las Vegas Strip.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-title">Ubicación & Contacto</h4>
+        <ul class="footer-links">
+          <li>3680 Las Vegas Blvd South</li>
+          <li>Paradise, NV 89109, Estados Unidos</li>
+          <li>Teléfono Concierge: +1 (702) 555-NOIR</li>
+          <li>WhatsApp Concierge Oficial: Atención 24/7</li>
+          <li>Email: reservas@hotelcasinonoir.com</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-title">Horarios & Estancia</h4>
+        <ul class="footer-links">
+          <li>Check-in: 3:00 PM | Check-out: 11:00 AM</li>
+          <li>Late check-out: Disponible hasta 3 horas</li>
+          <li>Casino & Lounge: Abierto 24 Horas</li>
+          <li>Piso Wellness Gótico: 8:00 AM a 10:00 PM</li>
+          <li>Restaurante & Bar: 7:00 AM a 2:00 AM</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-title">Servicios & Políticas</h4>
+        <ul class="footer-links">
+          <li><a href="#habitaciones" class="footer-nav-link">Habitaciones & Tarifas</a></li>
+          <li><a href="#wellness" class="footer-nav-link">Santuario Noir Wellness</a></li>
+          <li><a href="#casino" class="footer-nav-link">Reglas del Casino (+21)</a></li>
+          <li><a href="#reserva" class="footer-nav-link">Atención al Huésped</a></li>
+          <li><a href="#experiencia" class="footer-nav-link">Accesibilidad Universal ADA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Hotel Casino Noir. Todos los derechos reservados. Las Vegas, Nevada.</p>
+        <p class="footer-disclaimer">Elegancia, tecnología sin contacto y hospitalidad distinguida en Las Vegas Strip.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

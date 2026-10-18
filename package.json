@@ -1,0 +1,28 @@
+{
+  "name": "hotel-casino-noir",
+  "version": "1.0.0",
+  "description": "Sitio web oficial y sistema de reservas con integración automatizada de WhatsApp para Hotel Casino Noir Las Vegas.",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "twilio": "^5.3.4"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "vercel": "^37.14.0"
+  },
+  "keywords": [
+    "hotel",
+    "casino",
+    "las-vegas",
+    "whatsapp-api",
+    "vercel"
+  ],
+  "author": "Hotel Casino Noir",
+  "license": "ISC"
+}
