@@ -261,10 +261,12 @@ function showBookingConfirmationModal(data) {
     <div><strong>Estado del Mensaje:</strong> Enviado automáticamente a su WhatsApp</div>
   `;
 
-  // Configura el botón interactivo con el mensaje oficial que incluye el código
-  const directUrl = `https://wa.me/${SENDER_WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(data.message)}`;
+  // El mensaje automático lo despacha el servidor. El botón de contacto solo permite consultar al concierge.
+  const guestInquiryText = `Hola, he registrado la reserva ${data.bookingId} a nombre de ${data.fullName} y quisiera consultar con conserjería.`;
+  const conciergeUrl = `https://wa.me/${SENDER_WHATSAPP_INTERNATIONAL}?text=${encodeURIComponent(guestInquiryText)}`;
+  
   if (whatsappDirectLink) {
-    whatsappDirectLink.href = directUrl;
+    whatsappDirectLink.href = conciergeUrl;
   }
 
   bookingModal.style.display = "flex";
