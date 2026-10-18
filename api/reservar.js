@@ -59,16 +59,40 @@ module.exports = async function handler(req, res) {
           ? cleanRecipientPhone
           : `whatsapp:${cleanRecipientPhone}`;
 
-        const twilioResponse = await twilioClient.messages.create({
-          body: confirmationMessage,
+        const twilioPayload = {
           from: senderTwilio,
           to: formattedTo
-        });
+        };
+
+        // Si se ha configurado una plantilla aprobada (ContentSid que inicia con HX...)
+        if (process.env.TWILIO_CONTENT_SID) {
+          twilioPayload.contentSid = process.env.TWILIO_CONTENT_SID;
+          twilioPayload.contentVariables = JSON.stringify({
+            "1": fullName,
+            "2": `${checkIn} al ${checkOut}`,
+            "3": bookingId,
+            "4": roomType
+          });
+        } else {
+          // Envío en texto libre para la ventana de atención de 24 horas del Sandbox
+          twilioPayload.body = confirmationMessage;
+        }
+
+        const twilioResponse = await twilioClient.messages.create(twilioPayload);
 
         dispatchResult = { success: true, mode: "twilio", messageId: twilioResponse.sid };
       } catch (twilioError) {
         console.error("[Twilio Error]:", twilioError.message);
-        dispatchResult = { success: false, mode: "twilio_error", error: twilioError.message };
+        let errorAdvice = twilioError.message;
+        if (twilioError.message.includes("ContentSid Required")) {
+          errorAdvice = "El destinatario debe enviar primero 'join twilio-trial' al número de Twilio (+1 737 250 8034) para activar la ventana de 24 horas, o configurar TWILIO_CONTENT_SID con una plantilla aprobada HX...";
+        }
+        dispatchResult = { 
+          success: false, 
+          mode: "twilio_error", 
+          error: twilioError.message,
+          advice: errorAdvice 
+        };
       }
     } 
     // 2. Despacho alternativo vía Meta WhatsApp Cloud API (si se configuran tokens de Meta)
