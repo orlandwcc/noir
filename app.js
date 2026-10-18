@@ -5,7 +5,7 @@
  */
 
 // Número de WhatsApp oficial del Concierge de Hotel Casino Noir
-const SENDER_WHATSAPP_INTERNATIONAL = "584242083041";
+const SENDER_WHATSAPP_INTERNATIONAL = "584127173452";
 
 // Elementos del DOM principales
 const bookingForm = document.getElementById("bookingForm");

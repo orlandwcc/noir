@@ -8,7 +8,7 @@ Sitio web oficial y sistema de reservas con tecnología sin contacto y despacho 
 - **Piso 1: Noir Wellness Gótico:** Espacio exclusivo de bienestar femenino con spa de piedra volcánica.
 - **Catálogo de Habitaciones Smart:** 120 habitaciones en 6 tipologías con domótica y check-in digital.
 - **Torre de 8 Niveles:** Arquitectura responsiva con casino 24/7 en planta baja, suites y penthouses.
-- **Reserva Directa por WhatsApp (100% Gratis):** Al confirmar en la web, se abre WhatsApp con la solicitud completa y código `NOIR-XXXXXX` dirigido al Concierge (`+58 424-2083041`), quien responde automáticamente mediante el mensaje de bienvenida de WhatsApp Business.
+- **Reserva Directa por WhatsApp (100% Gratis):** Al confirmar en la web, se abre WhatsApp con la solicitud completa y código `NOIR-XXXXXX` dirigido al Concierge (`+58123456789`), quien responde automáticamente mediante el mensaje de bienvenida de WhatsApp Business.
 
 ## 📲 Configuración del Mensaje de Bienvenida Automático (WhatsApp Business)
 
